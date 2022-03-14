@@ -1,0 +1,39 @@
+.headerContainer {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  background-color: #ebf1ff;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.logoContainer {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.logoContainer:hover {
+  transform: scale(1.1);
+  transition: transform 200ms;
+}
+
+.headerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.OptionLink {
+  padding: 10px 20px;
+  font-family: 'Verdana';
+  font-size: 20px;
+  color: #222;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 200ms;
+  }
+}
