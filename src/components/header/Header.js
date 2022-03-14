@@ -1,25 +1,29 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import { ReactComponent as Logo } from '../../assets/logo.svg'
-import {
-  HeaderContainer,
-  LogoContainer,
-  OptionsContainer,
-  OptionLink,
-} from './HeaderStyles.jsx'
-function Header({ currentUser, hidden }) {
+import './headerStyles.scss'
+function Header() {
   return (
-    <HeaderContainer className="header">
-      <LogoContainer to="/">
-        <Logo className="logo" />
-      </LogoContainer>
-      <OptionsContainer>
-        <OptionLink to="/shop">SHOP</OptionLink>
-        <OptionLink to="/contact">CONTACT</OptionLink>
-        <OptionLink to="/signin">Sign In</OptionLink>
-        <OptionLink to="/cart">C'</OptionLink>
-      </OptionsContainer>
-    </HeaderContainer>
+    <div className="headerContainer">
+      <NavLink className="logoContainer" to="/">
+        <Logo />
+      </NavLink>
+      <div className="optionsContainer">
+        <NavLink className="optionLink" to="/shop">
+          Shop
+        </NavLink>
+        <NavLink className="optionLink" to="/contact">
+          Contact
+        </NavLink>
+        <NavLink className="optionLink" to="/signin">
+          Sign In
+        </NavLink>
+        <NavLink className="optionLink" to="/cart">
+          C'
+        </NavLink>
+      </div>
+    </div>
   )
 }
 
