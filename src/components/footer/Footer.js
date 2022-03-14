@@ -6,7 +6,7 @@ import { Facebook, Instagram, Twitter } from '@material-ui/icons'
 const Footer = () => {
   return (
     <div>
-      <div className="container">
+      <div className="footerContainer">
         <div className="left">
           <h1>Lorem Ipsum</h1>
           <p className="decribtion">
