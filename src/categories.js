@@ -13,9 +13,16 @@ const categories = [
   },
   {
     id: 3,
-    title: 'laptops',
+    title: 'Laptops',
     img: 'https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg',
     link: 'shop/laptops',
+  },
+  {
+    id: 4,
+    title: 'Accessories',
+    img:
+      'https://raw.githubusercontent.com/cardize/testData/main/Accessories.png',
+    link: 'shop/accessories',
   },
 ]
 

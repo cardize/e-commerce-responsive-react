@@ -10,12 +10,6 @@ function Header() {
         <Logo />
       </NavLink>
       <div className="optionsContainer">
-        <NavLink className="optionLink" to="/shop">
-          Shop
-        </NavLink>
-        <NavLink className="optionLink" to="/contact">
-          Contact
-        </NavLink>
         <NavLink className="optionLink" to="/signin">
           Sign In
         </NavLink>
