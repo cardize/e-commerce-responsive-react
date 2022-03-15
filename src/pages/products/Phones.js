@@ -9,7 +9,9 @@ export default class Phones extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`https://raw.githubusercontent.com/cardize/testData/main/db.json`)
+      .get(
+        `https://raw.githubusercontent.com/cardize/testData/main/phonesdb.json`,
+      )
       .then((res) => {
         const phones = res.data
         this.setState({ phones })
