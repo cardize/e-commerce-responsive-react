@@ -12,8 +12,8 @@ function Header() {
         <Logo />
       </NavLink>
       <div className="optionsContainer">
-        <NavLink className="optionLink" to="/signin">
-          Sign In
+        <NavLink to="/signin">
+          <button className="signInButton">Sign In</button>
         </NavLink>
         <NavLink className="optionLink" to="/checkOut">
           <img src={checkOutLogo} alt="" />
