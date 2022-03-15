@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { ReactComponent as Logo } from '../../assets/logo.svg'
 import './headerStyles.scss'
-import checkOutLogo from '../../assets/shoppingBag.svg'
+import checkOutLogo from '../../assets/logo.svg'
 
 function Header() {
   return (
@@ -15,8 +15,8 @@ function Header() {
         <NavLink to="/signin">
           <button className="signInButton">Sign In</button>
         </NavLink>
-        <NavLink className="optionLink" to="/checkOut">
-          <img src={checkOutLogo} alt="" />
+        <NavLink to="/checkOut">
+          <img className="checkOutLogo" src={checkOutLogo} alt="" />
         </NavLink>
       </div>
     </div>
