@@ -17,6 +17,7 @@ const categories = [
     img: 'https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg',
     link: 'shop/laptops',
   },
+
   {
     id: 4,
     title: 'Accessories',

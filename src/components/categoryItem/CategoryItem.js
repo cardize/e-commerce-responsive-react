@@ -5,7 +5,7 @@ import './CategoryItemStyles.scss'
 
 const CategoryItem = ({ item }) => {
   return (
-    <div>
+    <div className="categoryContainer">
       <NavLink className="imageContainer" to={`/${item.link}`}>
         <img className="categoryImage" src={item.img} alt="" />
         <button className="categoryButton">{item.title}</button>

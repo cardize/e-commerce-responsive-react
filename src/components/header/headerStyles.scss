@@ -1,7 +1,7 @@
 .headerContainer {
   display: flex;
   width: auto;
-  background-color: #e7f1f1;
+  background-color: #13818d;
   margin-bottom: 25px;
 }
 .logoContainer {
@@ -33,9 +33,17 @@
 }
 
 .optionLink {
+  border-style: none;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: flex;
+  fill: currentcolor;
+  font-size: 25px;
+  font-style: bold;
+  font-weight: 500;
+  height: 48px;
   padding: 10px 20px;
-  font-family: 'Verdana';
-  font-size: 20px;
   color: #222;
   cursor: pointer;
   &:hover {
