@@ -23,13 +23,14 @@ const Footer = () => {
             <Twitter />
           </div>
         </div>
-        <div className="footerRight">
+        <div className="footerLeft">
           <h3 className="footerTitle">Contact:</h3>
-          <div className="contactItem">
+          <p className="footerDecribtion">
             Lorem ipsum dolor sit amet consectetur adipiscing elit
-          </div>
-          <div className="contactItem">+90010101010101</div>
-          <div className="contactItem">loremipsum@loremsipsum</div>
+            <br />
+            +90010101010101 <br />
+            loremipsum@loremsipsum
+          </p>
           <img
             className="payment"
             src="https://i.ibb.co/Qfvn4z6/payment.png"
