@@ -44,7 +44,7 @@ const Footer = () => {
       >
         Lorem Ipsum
         <br />
-        ©2022 All rights reserved.
+        ©2022 All rights reserved
       </div>
     </div>
   )
