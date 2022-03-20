@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className="headerContainer">
       <NavLink className="logoContainer" to="/">
-        <Logo />
+        <Logo className="logoSvg" />
       </NavLink>
       <div className="optionsContainer">
         <NavLink to="/signin">
