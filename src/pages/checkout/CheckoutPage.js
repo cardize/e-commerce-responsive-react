@@ -1,12 +1,8 @@
 import React from 'react'
 
-//import CheckoutItem from '../../components/checkout-item/checkout-item.component'
-//import StripeButton from '../../components/stripe-button/stripe-button.component'
-//import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors'
-
 import './CheckOutPageStyles.scss'
 
-function CheckoutPage({ cartItems, total }) {
+function CheckoutPage({ total }) {
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -31,8 +27,7 @@ function CheckoutPage({ cartItems, total }) {
       </div>
       <div className="test-warning">
         Please use any data for address and name and email, also use <br />
-        card number: 4242 4242 4242 4242, expiry: 02/22, cvv: 123 for dummy
-        payment
+        card number: 3333 3333 3333 3333, expiry: 03/23, cvv: 333
       </div>
       <button price={total} />
     </div>
