@@ -7,7 +7,6 @@ import Homepage from './pages/homepage/Homepage'
 import SignInPage from './pages/signIn/SignInPage'
 import SignUpPage from './pages/signUp/SignUpPage'
 import CheckoutPage from './pages/checkout/CheckoutPage'
-import Accessories from './pages/products/Accessories'
 import Phones from './pages/products/Phones'
 import Tablets from './pages/products/Tablets'
 import Laptops from './pages/products/Laptops'
@@ -21,7 +20,6 @@ const App = () => {
         <Route path="/shop/phones" element={<Phones />} />
         <Route path="/shop/tablets" element={<Tablets />} />
         <Route path="/shop/laptops" element={<Laptops />} />
-        <Route path="/shop/accessories" element={<Accessories />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />

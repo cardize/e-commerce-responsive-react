@@ -14,25 +14,25 @@
   display: inline-block;
   gap: 8px;
   align-items: center;
+  .productImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .productName {
+    text-align: center;
+    color: #393b3b;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .price {
+    text-align: center;
+    color: #fd5800;
+  }
 }
 
-.productImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.productName {
-  text-align: center;
-  color: #393b3b;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.price {
-  text-align: center;
-  color: #fd5800;
-}
 .addToCartButtonContainer {
   text-align: center;
   align-items: center;

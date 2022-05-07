@@ -17,14 +17,6 @@ const categories = [
     img: 'https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg',
     link: 'shop/laptops',
   },
-
-  {
-    id: 4,
-    title: 'Accessories',
-    img:
-      'https://raw.githubusercontent.com/cardize/testData/main/Accessories.png',
-    link: 'shop/accessories',
-  },
 ]
 
 export default categories
