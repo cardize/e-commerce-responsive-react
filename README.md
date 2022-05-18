@@ -12,7 +12,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 <img width="449" alt="Screen Shot 2022-05-18 at 10 41 59" src="https://user-images.githubusercontent.com/62019173/168984895-148dbe15-8cd0-48fb-9075-55189fb56577.png">
 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 This project's autetication is still in progress...
