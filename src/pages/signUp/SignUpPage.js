@@ -9,7 +9,6 @@ export default function SignUpPage() {
         <form>
           <div className="form-group">
             <h1>Sign Up</h1>
-
             <label className="form-text" htmlFor="name">
               Name:
             </label>
@@ -18,6 +17,10 @@ export default function SignUpPage() {
               Surname:
             </label>
             <input type="surname" className="form-control" id="surname" />
+            <label className="form-text" htmlFor="adress">
+              Adress:
+            </label>
+            <input type="adress" className="form-control" id="adress" />
             <label className="form-text" htmlFor="email">
               Email:
             </label>

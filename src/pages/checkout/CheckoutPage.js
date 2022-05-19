@@ -1,10 +1,13 @@
 import React from 'react'
 import './CheckOutPageStyles.scss'
 import { connect } from 'react-redux'
-import { removeFromCart } from '../../redux/actions/index'
+import { removeFromCart, updateTotal } from '../../redux/actions/index'
+
+const totalCount = (props, item) => {
+  props.cartTotal = props.cartTotal - item.price * item.quentity
+}
 
 const CheckoutPage = (props) => {
-  console.log(props.cart)
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -32,9 +35,16 @@ const CheckoutPage = (props) => {
               <div className="item-details">
                 <p>{item.name}</p>
                 <p>{item.capacity}GB</p>
-                <p> {props.cart.length}</p>
+                <p>{item.quentity}</p>
                 <p>${item.price}</p>
-                <button className="confirm-button">Remove</button>
+                <button
+                  className="confirm-button"
+                  onClick={() => (
+                    props.removeFromCart(item.id), props.updateTotal(item)
+                  )}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           )
@@ -42,13 +52,16 @@ const CheckoutPage = (props) => {
       </div>
 
       <div className="total">
-        <h6>Total= ${props.cart.length * 100}</h6>
+        <h6>Total= ${props.cartTotal}</h6>
       </div>
       <div className="test-warning">
         Please use any data for address and name and email, also use <br />
         card number: 3333 3333 3333 3333, expiry: 03/23, cvv: 333
       </div>
-      <button className="confirm-button" price={props.cart.length}>
+      <button
+        className="confirm-button"
+        onClick={() => console.log(props.cart)}
+      >
         Confirm
       </button>
     </div>
@@ -58,7 +71,11 @@ const CheckoutPage = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
+    cartTotal: state.cartTotal,
   }
 }
 
-export default connect(mapStateToProps, { removeFromCart })(CheckoutPage)
+export default connect(mapStateToProps, {
+  removeFromCart,
+  updateTotal,
+})(CheckoutPage)

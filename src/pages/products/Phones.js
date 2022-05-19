@@ -1,10 +1,9 @@
 import React from 'react'
 import './productsStyles.scss'
 import { connect } from 'react-redux'
-import { addToCart, removeFromCart } from '../../redux/actions/index'
+import { addToCart, removeFromCart, cartTotal } from '../../redux/actions/index'
 
 function Phones(props) {
-  console.log(props.phones)
   return (
     <div className="productsContainer">
       {props.phones.map((phone) => (
@@ -17,7 +16,9 @@ function Phones(props) {
           <div className="addToCartButtonContainer">
             <button
               className="addToCartButton"
-              onClick={() => props.addToCart(phone)}
+              onClick={() => (
+                props.addToCart(phone), props.cartTotal(phone.price)
+              )}
             >
               Add to Cart
             </button>
@@ -35,4 +36,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { addToCart, removeFromCart })(Phones)
+export default connect(mapStateToProps, {
+  addToCart,
+  removeFromCart,
+  cartTotal,
+})(Phones)

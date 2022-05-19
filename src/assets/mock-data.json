@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "sku": "P01064",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 1",
+    "brand": "Apl",
+    "capacity": 64,
+    "price": 100,
+    "quentity": 1,
+    "stock": 90
+  },
+  {
+    "id": 2,
+    "sku": "P02064",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 2",
+    "brand": "Apl",
+    "capacity": 64,
+    "price": 120,
+    "quentity": 1,
+    "stock": 90
+  },
+  {
+    "id": 3,
+    "sku": "P03128",
+    "category": "tablets",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 3",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 150,
+    "quentity": 1,
+    "stock": 100
+  },
+  {
+    "id": 4,
+    "sku": "P04128",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 4",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 170,
+    "quentity": 1,
+    "stock": 90
+  },
+  {
+    "id": 5,
+    "sku": "P05128",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 5",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 120,
+    "quentity": 1,
+    "stock": 20
+  },
+  {
+    "id": 6,
+    "sku": "P06256",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 6",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 140,
+    "quentity": 1,
+    "stock": 20
+  },
+  {
+    "id": 7,
+    "sku": "P07256",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 7",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 170,
+    "quentity": 1,
+    "stock": 20
+  },
+  {
+    "id": 8,
+    "sku": "P08128",
+    "category": "phones",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/phones.png",
+    "name": "Phone 8",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 220,
+    "quentity": 1,
+    "stock": 20
+  }
+]
