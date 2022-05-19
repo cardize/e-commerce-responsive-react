@@ -1,25 +1,21 @@
 .productsContainer {
-  white-space: nowrap;
-  display: grid;
   margin: 20px;
   padding: 20px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  align-items: center;
 }
 
 .productContainer {
-  padding: 20px;
+  margin-bottom: 1rem;
   display: inline-block;
-  gap: 8px;
   align-items: center;
   .productImage {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 26px;
   }
-
+  span {
+    width: 100px;
+  }
   .productName {
     text-align: center;
     color: #393b3b;

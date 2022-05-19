@@ -1,23 +1,13 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 import './productsStyles.scss'
+import { connect } from 'react-redux'
+import { addToCart, removeFromCart } from '../../redux/actions/index'
 
-function Phones() {
-  const [phones, setPhones] = useState([])
-
-  useEffect(() => {
-    axios
-      .get(
-        'https://raw.githubusercontent.com/cardize/testData/main/phonesdb.json',
-      )
-      .then((response) => setPhones(response.data))
-      .catch((error) => console.log({ error }))
-  }, [])
-
+function Phones(props) {
+  console.log(props.phones)
   return (
     <div className="productsContainer">
-      {phones.map((phone) => (
+      {props.phones.map((phone) => (
         <div className="productContainer" key={phone.id}>
           <img className="productImage" src={phone.Img} alt="" />
           <h1 className="productName">
@@ -25,11 +15,24 @@ function Phones() {
           </h1>
           <h2 className="price">${phone.price}</h2>
           <div className="addToCartButtonContainer">
-            <button className="addToCartButton">Add to Cart</button>
+            <button
+              className="addToCartButton"
+              onClick={() => props.addToCart(phone)}
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       ))}
     </div>
   )
 }
-export default Phones
+
+const mapStateToProps = (state) => {
+  return {
+    cart: state.cart,
+    phones: state.phones,
+  }
+}
+
+export default connect(mapStateToProps, { addToCart, removeFromCart })(Phones)
