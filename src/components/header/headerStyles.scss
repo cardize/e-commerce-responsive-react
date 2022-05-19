@@ -16,8 +16,8 @@
   }
   .logoSvg {
     margin: 1rem;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -47,6 +47,17 @@
     transform: scale(1.3);
     transition: transform 200ms;
   }
+}
+.quentity {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 1.1rem;
+  margin-right: 1.5rem;
+  padding: 0;
+  font-size: 18px;
+  color: antiquewhite;
 }
 
 a:-webkit-any-link {
@@ -92,8 +103,8 @@ a:-webkit-any-link {
 
 .checkOutLogo {
   margin: 1rem;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   &:hover {
     transform: scale(1.3);
     transition: transform 200ms;
