@@ -3,10 +3,10 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const CART_TOTAL = 'CART_TOTAL'
 export const UPDATE_TOTAL = 'UPDATE_TOTAL'
 
-export const addToCart = (phone) => {
+export const addToCart = (item) => {
   return {
     type: ADD_TO_CART,
-    payload: phone,
+    payload: item,
   }
 }
 
