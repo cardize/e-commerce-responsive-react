@@ -3,10 +3,6 @@ import './CheckOutPageStyles.scss'
 import { connect } from 'react-redux'
 import { removeFromCart, updateTotal } from '../../redux/actions/index'
 
-const totalCount = (props, item) => {
-  props.cartTotal = props.cartTotal - item.price * item.quentity
-}
-
 const CheckoutPage = (props) => {
   return (
     <div className="checkout-page">
