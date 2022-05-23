@@ -7,6 +7,7 @@ import SignInPage from './pages/signIn/SignInPage'
 import SignUpPage from './pages/signUp/SignUpPage'
 import CheckoutPage from './pages/checkout/CheckoutPage'
 import Phones from './pages/products/Phones'
+import Dashboard from './pages/dashboard/dashboard'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer classname="footer" />
     </Router>

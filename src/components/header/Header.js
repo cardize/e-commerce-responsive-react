@@ -13,7 +13,7 @@ function Header(props) {
       </NavLink>
       <div className="optionsContainer">
         <NavLink to="/signin">
-          <button className="signInButton">Sign In</button>
+          <button className="signInButton">User</button>
         </NavLink>
         <NavLink to="/checkOut">
           <img className="checkOutLogo" src={checkOutLogo} alt="" />
