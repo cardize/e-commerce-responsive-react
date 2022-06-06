@@ -1,9 +1,14 @@
 import React from 'react'
 import './CheckOutPageStyles.scss'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { removeFromCart, updateTotal } from '../../redux/actions/index'
 
 const CheckoutPage = (props) => {
+  function refreshPage() {
+    window.parent.location = window.parent.location.href
+  }
+
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -54,7 +59,9 @@ const CheckoutPage = (props) => {
         Please use any data for address and name and email, also use <br />
         card number: 3333 3333 3333 3333, expiry: 03/23, cvv: 333
       </div>
-      <button className="confirm-button">Confirm</button>
+      <button onClick={() => refreshPage()} className="confirm-button">
+        Confirm
+      </button>
     </div>
   )
 }

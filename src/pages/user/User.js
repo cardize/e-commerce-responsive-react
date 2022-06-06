@@ -15,7 +15,9 @@ const User = () => {
           {currentUser?.email}
         </p>
         <Link to="/login" onClick={() => signOut(auth)}>
-          <button className="logout-button">Log Out</button>
+          <button className="logout-button">
+            {currentUser ? 'Log Out' : 'Log In'}
+          </button>
         </Link>
       </div>
     </div>
