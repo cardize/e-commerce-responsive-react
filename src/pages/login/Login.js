@@ -20,32 +20,40 @@ function Login() {
 
   return (
     <div className="center">
-      <div className="auth">
+      <div className="form-group">
         <h1>Log in</h1>
         {error && <div className="auth__error">{error}</div>}
-        <form onSubmit={login} name="login_form">
-          <input
-            type="email"
-            value={email}
-            required
-            placeholder="Enter your email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <input
-            type="password"
-            value={password}
-            required
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <button type="submit">Login</button>
+        <form className="form-items" onSubmit={login} name="login_form">
+          <div className="form-item">
+            <input
+              className="form-input"
+              type="email"
+              value={email}
+              required
+              placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="form-item">
+            <input
+              className="form-input"
+              type="password"
+              value={password}
+              required
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="login-button" type="submit">
+            Login
+          </button>
+          <div className="form-item">Don't have an account?</div>
+          <div className="form-item">
+            <Link to="/register">
+              <button className="register-button">Register</button>
+            </Link>
+          </div>
         </form>
-        <p>
-          Don't have and account?
-          <Link to="/register">Create one here</Link>
-        </p>
       </div>
     </div>
   )

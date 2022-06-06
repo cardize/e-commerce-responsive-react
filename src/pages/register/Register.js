@@ -38,41 +38,60 @@ function Register() {
   }
 
   return (
-    <div className="center">
-      <div className="auth">
+    <div>
+      <div className="form-group">
         <h1>Register</h1>
         {error && <div className="auth__error">{error}</div>}
-        <form onSubmit={register} name="registration_form">
-          <input
-            type="email"
-            value={email}
-            placeholder="Enter your email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        <form
+          className="form-items"
+          onSubmit={register}
+          name="registration_form"
+        >
+          <div className="form-item">
+            <input
+              className="form-input"
+              type="email"
+              value={email}
+              placeholder="Enter your email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-          <input
-            type="password"
-            value={password}
-            required
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <div className="form-item">
+            <input
+              className="form-input"
+              type="password"
+              value={password}
+              required
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-          <input
-            type="password"
-            value={confirmPassword}
-            required
-            placeholder="Confirm password"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          <div className="form-item">
+            <input
+              className="form-input"
+              type="password"
+              value={confirmPassword}
+              required
+              placeholder="Confirm password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
 
-          <button type="submit">Register</button>
+          <div className="form-item">
+            <button className="login-button" type="submit">
+              Register
+            </button>
+          </div>
         </form>
-        <span>
-          Already have an account?
-          <Link to="/login">login</Link>
-        </span>
+        <div className="form-item">Already have an account?</div>
+        <div className="form-item">
+          <Link to="/login">
+            <button className="register-button">Login</button>
+          </Link>
+        </div>
       </div>
     </div>
   )

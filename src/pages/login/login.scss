@@ -1,28 +1,33 @@
 .form-group {
   display: grid;
+  justify-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: space-around;
   align-content: space-evenly;
   .form-items {
+    justify-items: center;
     margin: 1rem;
     display: inline-grid;
     justify-content: space-around;
   }
-  .form-text {
+
+  .form-item {
     font-size: 20px;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    .form-input {
+      text-indent: 5px;
+      font-size: 18px;
+      height: 30px;
+      width: 300px;
+      border: 2px solid #fd5800;
+      border-radius: 30px;
+    }
   }
-  .form-control {
-    text-indent: 5px;
-    font-size: 20px;
-    height: 30px;
-    width: 300px;
-    border: 2px solid #fd5800;
-    border-radius: 30px;
-  }
-  .signInButton {
+
+  .login-button {
     appearance: none;
     background-color: #fd5800;
     border-radius: 24px;
@@ -59,7 +64,7 @@
     }
   }
 
-  .signUpButton {
+  .register-button {
     appearance: none;
     background-color: #fd5800;
     border-radius: 24px;
@@ -71,7 +76,7 @@
     cursor: pointer;
     fill: currentcolor;
     font-family: 'Google Sans', Roboto, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 250;
     height: 24px;
     justify-content: center;

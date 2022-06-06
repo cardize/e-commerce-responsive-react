@@ -1,61 +1,29 @@
 .form-group {
   display: grid;
+  justify-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   justify-content: space-around;
   align-content: space-evenly;
   .form-items {
+    justify-items: center;
     margin: 1rem;
     display: inline-grid;
     justify-content: space-around;
   }
-  .form-text {
+
+  .form-item {
     font-size: 20px;
     margin-top: 1rem;
     margin-bottom: 1rem;
-  }
-  .form-control {
-    text-indent: 5px;
-    font-size: 20px;
-    height: 30px;
-    width: 300px;
-    border: 2px solid #fd5800;
-    border-radius: 30px;
-  }
-  .signUpButton2 {
-    appearance: none;
-    background-color: #fd5800;
-    border-radius: 24px;
-    border-style: none;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-      rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    fill: currentcolor;
-    font-family: 'Google Sans', Roboto, Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    height: 48px;
-    justify-content: center;
-    letter-spacing: 0.25px;
-    line-height: normal;
-    max-width: 100%;
-    overflow: visible;
-    padding: 2px 24px;
-    position: relative;
-    text-align: center;
-    text-transform: none;
-    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-    user-select: none;
-    touch-action: manipulation;
-    width: auto;
-    will-change: transform, opacity;
-    z-index: 0;
-    &:hover {
-      transform: scale(1.1);
-      transition: transform 200ms;
+
+    .form-input {
+      text-indent: 5px;
+      font-size: 18px;
+      height: 30px;
+      width: 300px;
+      border: 2px solid #fd5800;
+      border-radius: 30px;
     }
   }
 }
