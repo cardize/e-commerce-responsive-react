@@ -54,12 +54,7 @@ const CheckoutPage = (props) => {
         Please use any data for address and name and email, also use <br />
         card number: 3333 3333 3333 3333, expiry: 03/23, cvv: 333
       </div>
-      <button
-        className="confirm-button"
-        onClick={() => console.log(props.cart)}
-      >
-        Confirm
-      </button>
+      <button className="confirm-button">Confirm</button>
     </div>
   )
 }
