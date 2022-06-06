@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const User = () => {
   const { currentUser } = useAuthValue()
   return (
-    <div className="center">
+    <div className="user-container">
       <div className="profile">
         <h1>Profile</h1>
         <p>
@@ -15,7 +15,7 @@ const User = () => {
           {currentUser?.email}
         </p>
         <Link to="/login" onClick={() => signOut(auth)}>
-          <button>Sign Out</button>
+          <button className="logout-button">Log Out</button>
         </Link>
       </div>
     </div>
