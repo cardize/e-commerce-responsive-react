@@ -3,7 +3,7 @@ import './productsStyles.scss'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart, cartTotal } from '../../redux/actions/index'
 
-function Phones(props) {
+const Phones = (props) => {
   return (
     <div className="productsContainer">
       {props.phones.map((item) => (

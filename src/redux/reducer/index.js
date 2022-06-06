@@ -6,6 +6,9 @@ import {
 } from '../actions/index'
 import axios from 'axios'
 
+const url =
+  'https://raw.githubusercontent.com/cardize/testData/main/phonesdb.json'
+
 const INITIAL_STATE = {
   phones: [],
   cart: [],
@@ -14,9 +17,7 @@ const INITIAL_STATE = {
 
 export const reducer = (state = INITIAL_STATE, action) => {
   axios
-    .get(
-      'https://raw.githubusercontent.com/cardize/testData/main/phonesdb.json',
-    )
+    .get(url)
     .then((response) => (state.phones = response.data))
     .catch((error) => console.log({ error }))
   switch (action.type) {

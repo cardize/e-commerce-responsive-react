@@ -12,10 +12,10 @@ function Header(props) {
         <Logo className="logoSvg" />
       </NavLink>
       <div className="optionsContainer">
-        <NavLink to="/signin">
+        <NavLink to="/login">
           <button className="signInButton">User</button>
         </NavLink>
-        <NavLink to="/checkOut">
+        <NavLink to="/checkout">
           <img className="checkOutLogo" src={checkOutLogo} alt="" />
           <p className="quentity">{props.cart.length}</p>
         </NavLink>
