@@ -5,24 +5,15 @@
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-<img width="973" alt="Screen Shot 2022-05-18 at 10 39 21" src="https://user-images.githubusercontent.com/62019173/168984287-7c1ee41b-6dd4-4c9d-b1e7-83f4b07c8dee.png">
 
-<img width="677" alt="Screen Shot 2022-05-20 at 01 18 59" src="https://user-images.githubusercontent.com/62019173/169413826-dbaae4de-d09e-4e06-a717-1f4b8e518ee6.png">
+<img width="984" alt="Screenshot 2022-06-08 at 12 54 11" src="https://user-images.githubusercontent.com/62019173/172589222-a40618d8-dbbe-46fd-b5ab-c63d15244243.png">
 
-<img width="663" alt="Screen Shot 2022-05-23 at 14 16 58" src="https://user-images.githubusercontent.com/62019173/169810477-9afcebdf-7cf0-4c1e-ab09-496153b87900.png">
+<img width="656" alt="Screenshot 2022-06-08 at 12 56 45" src="https://user-images.githubusercontent.com/62019173/172589242-50a5cb88-9c8a-49bd-9f92-50fb1eac2336.png">
 
-<img width="524" alt="Screen Shot 2022-05-23 at 14 18 46" src="https://user-images.githubusercontent.com/62019173/169810504-716fda43-2992-4193-822e-c65b9dbfc95b.png">
+<img width="534" alt="Screenshot 2022-06-08 at 12 57 10" src="https://user-images.githubusercontent.com/62019173/172589260-f78d4116-eeb6-4806-ba3a-9e2ae057f7c2.png">
 
-<img width="457" alt="Screen Shot 2022-05-23 at 14 31 27" src="https://user-images.githubusercontent.com/62019173/169810536-4b576463-60fa-4eff-852d-94e35d89d1ff.png">
+<img width="267" alt="Screenshot 2022-06-08 at 12 57 58" src="https://user-images.githubusercontent.com/62019173/172589270-3063e451-4bc6-46ba-8cf4-6ca448bd14d6.png">
 
-<img width="637" alt="Screen Shot 2022-05-20 at 01 15 10" src="https://user-images.githubusercontent.com/62019173/169413514-c36a59c1-84c6-48d0-86f0-d571348f90f8.png">
+<img width="482" alt="Screenshot 2022-06-08 at 12 58 34" src="https://user-images.githubusercontent.com/62019173/172589303-7dd27bf6-f09d-4694-b74f-b07d0d4911d4.png">
 
-<img width="981" alt="Screen Shot 2022-05-23 at 14 32 55" src="https://user-images.githubusercontent.com/62019173/169810568-b7fb9f97-48a2-4509-b248-98ae38f84931.png">
-
-<img width="230" alt="Screen Shot 2022-05-20 at 01 15 20" src="https://user-images.githubusercontent.com/62019173/169413542-69341a45-1623-4b69-b43d-b5cda80cf420.png">
-
-
-
-
-
-This project's authetication is still in progress...
+<img width="496" alt="Screenshot 2022-06-08 at 12 58 16" src="https://user-images.githubusercontent.com/62019173/172589318-ce335b7a-ff90-4051-96fe-b09e52674dcb.png">
