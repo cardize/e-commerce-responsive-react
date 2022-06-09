@@ -11,30 +11,24 @@ export const addToCart = (item) => {
   }
 }
 
-export const removeFromCart = (id) => {
+export const removeFromCart = (item) => {
   return {
     type: REMOVE_FROM_CART,
-    payload: id,
+    payload: item,
   }
 }
 
-export const increaseQuantity = (id, quantity) => {
+export const increaseQuantity = (item) => {
   return {
     type: INCREASE_QUANTITY,
-    payload: {
-      id,
-      quantity,
-    },
+    payload: item,
   }
 }
 
-export const decreaseQuantity = (id, quantity) => {
+export const decreaseQuantity = (item) => {
   return {
     type: DECREASE_QUANTITY,
-    payload: {
-      id,
-      quantity,
-    },
+    payload: item,
   }
 }
 

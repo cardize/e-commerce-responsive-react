@@ -3,10 +3,13 @@ import {
   REMOVE_FROM_CART,
   INCREASE_QUANTITY,
   DECREASE_QUANTITY,
+  TOTAL_PRICE,
+  totalPrice,
 } from '../actions/index'
 
 const INITIAL_STATE = {
   cart: [],
+  totalPrice: 0,
 }
 
 export const reducer = (state = INITIAL_STATE, action) => {
@@ -19,6 +22,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
       } else {
         return {
           ...state,
+          totalPrice: state.totalPrice + action.payload.price,
           cart: [...state.cart, action.payload],
         }
       }
@@ -26,12 +30,15 @@ export const reducer = (state = INITIAL_STATE, action) => {
     case REMOVE_FROM_CART:
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
+        totalPrice:
+          state.totalPrice - action.payload.price * action.payload.quantity,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
       }
 
     case INCREASE_QUANTITY:
       return {
         ...state,
+        totalPrice: state.totalPrice + action.payload.price,
         cart: state.cart.map((item) => {
           if (item.id === action.payload.id) {
             return {
@@ -47,6 +54,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
     case DECREASE_QUANTITY:
       return {
         ...state,
+        totalPrice: state.totalPrice - action.payload.price,
         cart: state.cart.map((item) => {
           if (item.id === action.payload.id && item.quantity > 1) {
             return {

@@ -74,9 +74,7 @@ const CheckoutPage = (props) => {
                 <div className="buttons">
                   <button
                     className="quantity-button"
-                    onClick={() =>
-                      props.decreaseQuantity(item.id, item.quantity)
-                    }
+                    onClick={() => props.decreaseQuantity(item)}
                   >
                     -
                   </button>
@@ -85,9 +83,7 @@ const CheckoutPage = (props) => {
                 <div className="buttons">
                   <button
                     className="quantity-button"
-                    onClick={() =>
-                      props.increaseQuantity(item.id, item.quantity)
-                    }
+                    onClick={() => props.increaseQuantity(item)}
                   >
                     +
                   </button>
@@ -96,7 +92,7 @@ const CheckoutPage = (props) => {
 
                 <button
                   className="confirm-button"
-                  onClick={() => (setIsPopup(true), setRequestedId(item.id))}
+                  onClick={() => (setIsPopup(true), setRequestedId(item))}
                 >
                   Remove
                 </button>
@@ -107,7 +103,7 @@ const CheckoutPage = (props) => {
       </div>
 
       <div className="total">
-        <h6>Total= $</h6>
+        <h6>Total= ${props.totalPrice}</h6>
       </div>
       <div className="test-warning">
         Please use any data for address and name and email, also use <br />
@@ -123,6 +119,7 @@ const CheckoutPage = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
+    totalPrice: state.totalPrice,
   }
 }
 
@@ -130,5 +127,4 @@ export default connect(mapStateToProps, {
   removeFromCart,
   increaseQuantity,
   decreaseQuantity,
-  totalPrice,
 })(CheckoutPage)
