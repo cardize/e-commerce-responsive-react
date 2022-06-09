@@ -3,8 +3,6 @@ import {
   REMOVE_FROM_CART,
   INCREASE_QUANTITY,
   DECREASE_QUANTITY,
-  TOTAL_PRICE,
-  totalPrice,
 } from '../actions/index'
 
 const INITIAL_STATE = {
@@ -55,6 +53,7 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         totalPrice: state.totalPrice - action.payload.price,
+
         cart: state.cart.map((item) => {
           if (item.id === action.payload.id && item.quantity > 1) {
             return {

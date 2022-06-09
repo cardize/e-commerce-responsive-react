@@ -74,7 +74,9 @@ const CheckoutPage = (props) => {
                 <div className="buttons">
                   <button
                     className="quantity-button"
-                    onClick={() => props.decreaseQuantity(item)}
+                    onClick={() =>
+                      item.quantity >= 2 ? props.decreaseQuantity(item) : null
+                    }
                   >
                     -
                   </button>
