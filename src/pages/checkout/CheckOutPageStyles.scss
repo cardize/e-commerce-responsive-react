@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
 }
+
 .checkout-page {
   width: 55%;
   min-height: 90vh;
@@ -37,12 +38,15 @@
     .item-details {
       display: flex;
       align-items: center;
-      display: flex;
-      align-items: center;
+      justify-content: space-around;
       width: 500px;
       justify-content: space-between;
     }
+    .item-texts {
+      width: 80px;
+    }
   }
+
   .total {
     display: flex;
     width: 500px;
@@ -58,6 +62,37 @@
   }
 }
 
+.quentity-button {
+  display: flex;
+  align-items: center;
+  appearance: none;
+  background-color: #fd5800;
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  fill: currentcolor;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: normal;
+  overflow: visible;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+  width: 25px;
+  will-change: transform, opacity;
+  z-index: 0;
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 200ms;
+  }
+}
 .confirm-button {
   display: flex;
   align-items: center;

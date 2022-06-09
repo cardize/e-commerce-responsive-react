@@ -1,12 +1,9 @@
 import './CheckOutPageStyles.scss'
 import { connect } from 'react-redux'
 import { removeFromCart } from '../../redux/actions/index'
-import { useState, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const CheckoutPage = (props) => {
-  const [cart, setCart] = useState(props.cart)
-  const [totalItems, setTotalItems] = useState(0)
-  const [totalPrice, setTotalPrice] = useState(0)
   const [requestedId, setRequestedId] = useState('')
   const [isPopup, setIsPopup] = useState(false)
 
@@ -38,7 +35,7 @@ const CheckoutPage = (props) => {
           <span>Products</span>
         </div>
         <div className="header-block">
-          <span>Description</span>
+          <span>Capacity</span>
         </div>
         <div className="header-block">
           <span>Quantity</span>
@@ -54,14 +51,21 @@ const CheckoutPage = (props) => {
       {popupModal()}
 
       <div className="cart-items">
-        {cart.map((item) => {
+        {props.cart.map((item) => {
           return (
             <div className="cart-item" key={item.id}>
               <div className="item-details">
-                <p>{item.name}</p>
-                <p>{item.capacity}GB</p>
-                <p>{item.quentity}</p>
+                <p className="item-texts">{item.name}</p>
+                <p className="item-texts">{item.capacity}GB</p>
+                <div className="buttons">
+                  <button className="quentity-button"> - </button>
+                </div>
+                <p className="quentity-number">{item.quentity}</p>
+                <div className="buttons">
+                  <button className="quentity-button"> + </button>
+                </div>
                 <p>${item.price}</p>
+
                 <button
                   className="confirm-button"
                   onClick={() => (setIsPopup(true), setRequestedId(item.id))}
