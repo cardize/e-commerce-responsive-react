@@ -70,3 +70,52 @@
     transition: transform 200ms;
   }
 }
+
+.natification {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  margin-top: 7rem;
+  margin-right: 3rem;
+  background-color: #ffffff;
+  border: rgba(0, 0, 0, 0.12) solid 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+  .natification-button {
+    display: flex;
+    align-items: center;
+    appearance: none;
+    margin-left: 1rem;
+    background-color: #fd5800;
+    border-radius: 30px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    fill: currentcolor;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    line-height: normal;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    touch-action: manipulation;
+    will-change: transform, opacity;
+    z-index: 0;
+  }
+  .natification-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #393b3b;
+  }
+}

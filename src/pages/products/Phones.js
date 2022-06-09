@@ -1,5 +1,5 @@
 import React from 'react'
-import './productsStyles.scss'
+import './products.scss'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart } from '../../redux/actions/index'
 import { useState, useEffect, useCallback } from 'react'
@@ -16,10 +16,9 @@ const Phones = (props) => {
   const popupModal = useCallback(() => {
     if (isAdded)
       return (
-        <div>
-          <div className="popup-back">
-            <h1 onClick={() => setIsAdded(false)}>Added to cart</h1>
-          </div>
+        <div className="natification" onClick={() => setIsAdded(false)}>
+          <span className="natification-text">Added to cart</span>
+          <button className="natification-button">X</button>
         </div>
       )
   }, [isAdded])

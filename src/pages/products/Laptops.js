@@ -1,27 +1,39 @@
 import React from 'react'
-import './productsStyles.scss'
+import './products.scss'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart } from '../../redux/actions/index'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 
 const Laptops = (props) => {
   const url =
     'https://raw.githubusercontent.com/cardize/testData/main/datadb.json'
 
-  const [phones, setPhones] = useState([])
+  const [laptops, setLaptops] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isAdded, setIsAdded] = useState(false)
+
+  const popupModal = useCallback(() => {
+    if (isAdded)
+      return (
+        <div className="natification" onClick={() => setIsAdded(false)}>
+          <span className="natification-text">Added to cart</span>
+          <button className="natification-button">X</button>
+        </div>
+      )
+  }, [isAdded])
 
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setPhones(response.data.laptops))
+      .then((response) => setLaptops(response.data.laptops))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])
 
   return (
     <div className="productsContainer">
+      {popupModal()}
       {isLoading ? (
         <div className="loading-container">
           <div className="loading-banner">
@@ -29,7 +41,7 @@ const Laptops = (props) => {
           </div>
         </div>
       ) : (
-        phones.map((item) => (
+        laptops.map((item) => (
           <div className="productContainer" key={item.id}>
             <img className="productImage" src={item.Img} alt="" />
             <h1 className="productName">
@@ -39,7 +51,7 @@ const Laptops = (props) => {
             <div className="addToCartButtonContainer">
               <button
                 className="addToCartButton"
-                onClick={() => props.addToCart(item)}
+                onClick={() => (props.addToCart(item), setIsAdded(true))}
               >
                 Add to Cart
               </button>
