@@ -4,13 +4,13 @@ import {
   removeFromCart,
   increaseQuantity,
   decreaseQuantity,
-  totalPrice,
 } from '../../redux/actions/index'
 import { useState, useCallback } from 'react'
 
 const CheckoutPage = (props) => {
   const [requestedId, setRequestedId] = useState('')
   const [isPopup, setIsPopup] = useState(false)
+  const [isPayment, setIsPayment] = useState(false)
 
   const popupModal = useCallback(() => {
     if (isPopup === true) {
@@ -111,9 +111,20 @@ const CheckoutPage = (props) => {
         Please use any data for address and name and email, also use <br />
         card number: 3333 3333 3333 3333, expiry: 03/23, cvv: 333
       </div>
-      <button onClick={() => refreshPage()} className="confirm-button">
+      <button onClick={() => setIsPayment(true)} className="confirm-button">
         Confirm
       </button>
+      {isPayment ? (
+        <div className="payment-container">
+          <div className="payment-inputs">
+            <input className="credit-number" placeholder="Card Number"></input>
+            <input className="month" placeholder="Expire Month"></input>
+            <input className="year" placeholder="Expire Year"></input>
+            <input className="cvv" placeholder="CVV"></input>
+            <button onClick={() => refreshPage()}>Complete Payment</button>
+          </div>
+        </div>
+      ) : null}
     </div>
   )
 }
