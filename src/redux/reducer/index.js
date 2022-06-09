@@ -1,7 +1,6 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/index'
 
 const INITIAL_STATE = {
-  phones: [],
   cart: [],
 }
 
