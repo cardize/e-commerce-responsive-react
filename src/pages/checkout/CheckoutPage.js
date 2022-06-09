@@ -1,10 +1,32 @@
-import React from 'react'
 import './CheckOutPageStyles.scss'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { removeFromCart, updateTotal } from '../../redux/actions/index'
+import { removeFromCart } from '../../redux/actions/index'
+import { useState, useCallback } from 'react'
 
 const CheckoutPage = (props) => {
+  const [cart, setCart] = useState(props.cart)
+  const [totalItems, setTotalItems] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0)
+  const [requestedId, setRequestedId] = useState('')
+  const [isPopup, setIsPopup] = useState(false)
+
+  const popupModal = useCallback(() => {
+    if (isPopup === true) {
+      return (
+        <div className="popup-back" onClick={() => setIsPopup(false)}>
+          <div className="popup-container">
+            <button onClick={() => props.removeFromCart(requestedId)}>
+              <h1>Yes</h1>
+            </button>
+            <button onClick={() => setIsPopup(false)}>
+              <h1>No</h1>
+            </button>
+          </div>
+        </div>
+      )
+    }
+  }, [isPopup])
+
   function refreshPage() {
     window.parent.location = window.parent.location.href
   }
@@ -29,8 +51,10 @@ const CheckoutPage = (props) => {
         </div>
       </div>
 
+      {popupModal()}
+
       <div className="cart-items">
-        {props.cart.map((item) => {
+        {cart.map((item) => {
           return (
             <div className="cart-item" key={item.id}>
               <div className="item-details">
@@ -40,9 +64,7 @@ const CheckoutPage = (props) => {
                 <p>${item.price}</p>
                 <button
                   className="confirm-button"
-                  onClick={() => (
-                    props.removeFromCart(item.id), props.updateTotal(item)
-                  )}
+                  onClick={() => (setIsPopup(true), setRequestedId(item.id))}
                 >
                   Remove
                 </button>
@@ -53,7 +75,7 @@ const CheckoutPage = (props) => {
       </div>
 
       <div className="total">
-        <h6>Total= ${props.cartTotal}</h6>
+        <h6>Total= $</h6>
       </div>
       <div className="test-warning">
         Please use any data for address and name and email, also use <br />
@@ -69,11 +91,9 @@ const CheckoutPage = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
-    cartTotal: state.cartTotal,
   }
 }
 
 export default connect(mapStateToProps, {
   removeFromCart,
-  updateTotal,
 })(CheckoutPage)

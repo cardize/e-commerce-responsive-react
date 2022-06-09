@@ -14,6 +14,8 @@ import Header from './components/header/Header'
 import Homepage from './pages/homepage/Homepage'
 import CheckoutPage from './pages/checkout/CheckoutPage'
 import Phones from './pages/products/Phones'
+import Laptops from './pages/products/Laptops'
+import Tablets from './pages/products/Tablets'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 import User from './pages/user/User'
@@ -45,6 +47,8 @@ const App = () => {
           <Route path="/user" element={<User />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/shop/phones" element={<Phones />} />
+          <Route path="/shop/laptops" element={<Laptops />} />
+          <Route path="/shop/tablets" element={<Tablets />} />
           <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
         <Footer classname="footer" />

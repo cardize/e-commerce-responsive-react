@@ -1,31 +1,17 @@
-import {
-  ADD_TO_CART,
-  REMOVE_FROM_CART,
-  CART_TOTAL,
-  UPDATE_TOTAL,
-} from '../actions/index'
-import axios from 'axios'
-
-const url =
-  'https://raw.githubusercontent.com/cardize/testData/main/phonesdb.json'
+import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/index'
 
 const INITIAL_STATE = {
   phones: [],
   cart: [],
-  cartTotal: 0,
 }
 
 export const reducer = (state = INITIAL_STATE, action) => {
-  axios
-    .get(url)
-    .then((response) => (state.phones = response.data))
-    .catch((error) => console.log({ error }))
   switch (action.type) {
     case ADD_TO_CART:
       let isAdded = state.cart.find((item) => item.id === action.payload.id)
       if (isAdded) {
-        action.payload.quentity++
         isAdded = false
+        return state
       } else {
         return {
           ...state,
@@ -37,18 +23,6 @@ export const reducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload),
-      }
-
-    case CART_TOTAL:
-      return {
-        ...state,
-        cartTotal: state.cartTotal + action.payload,
-      }
-
-    case UPDATE_TOTAL:
-      return {
-        ...state,
-        cartTotal: state.cartTotal - action.payload,
       }
 
     default:

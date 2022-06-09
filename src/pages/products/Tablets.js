@@ -5,7 +5,7 @@ import { addToCart, removeFromCart } from '../../redux/actions/index'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-const Phones = (props) => {
+const Tablets = (props) => {
   const url =
     'https://raw.githubusercontent.com/cardize/testData/main/datadb.json'
 
@@ -15,7 +15,7 @@ const Phones = (props) => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setPhones(response.data.phones))
+      .then((response) => setPhones(response.data.tablets))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])
@@ -61,4 +61,4 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   addToCart,
   removeFromCart,
-})(Phones)
+})(Tablets)
