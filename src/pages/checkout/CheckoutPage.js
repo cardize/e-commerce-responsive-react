@@ -1,7 +1,7 @@
 import './CheckOutPageStyles.scss'
 import { connect } from 'react-redux'
 import { removeFromCart } from '../../redux/actions/index'
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 
 const CheckoutPage = (props) => {
   const [requestedId, setRequestedId] = useState('')
@@ -58,11 +58,11 @@ const CheckoutPage = (props) => {
                 <p className="item-texts">{item.name}</p>
                 <p className="item-texts">{item.capacity}GB</p>
                 <div className="buttons">
-                  <button className="quentity-button"> - </button>
+                  <button className="quantity-button">-</button>
                 </div>
-                <p className="quentity-number">{item.quentity}</p>
+                <p>{item.quantity}</p>
                 <div className="buttons">
-                  <button className="quentity-button"> + </button>
+                  <button className="quantity-button">+</button>
                 </div>
                 <p>${item.price}</p>
 
