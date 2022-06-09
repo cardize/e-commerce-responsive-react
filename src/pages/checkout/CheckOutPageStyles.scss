@@ -13,14 +13,13 @@
 
   .checkout-header {
     width: 500px;
-    padding: 10px 0;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: #fd5800 solid 1px;
 
     .header-block {
       text-transform: capitalize;
-      width: 80px;
       &:last-child {
         width: 8%;
       }

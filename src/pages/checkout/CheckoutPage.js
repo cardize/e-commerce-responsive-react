@@ -1,6 +1,11 @@
 import './CheckOutPageStyles.scss'
 import { connect } from 'react-redux'
-import { removeFromCart } from '../../redux/actions/index'
+import {
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+  totalPrice,
+} from '../../redux/actions/index'
 import { useState, useCallback } from 'react'
 
 const CheckoutPage = (props) => {
@@ -67,11 +72,25 @@ const CheckoutPage = (props) => {
                 <p className="item-texts">{item.name}</p>
                 <p className="item-texts">{item.capacity}GB</p>
                 <div className="buttons">
-                  <button className="quantity-button">-</button>
+                  <button
+                    className="quantity-button"
+                    onClick={() =>
+                      props.decreaseQuantity(item.id, item.quantity)
+                    }
+                  >
+                    -
+                  </button>
                 </div>
                 <p>{item.quantity}</p>
                 <div className="buttons">
-                  <button className="quantity-button">+</button>
+                  <button
+                    className="quantity-button"
+                    onClick={() =>
+                      props.increaseQuantity(item.id, item.quantity)
+                    }
+                  >
+                    +
+                  </button>
                 </div>
                 <p>${item.price}</p>
 
@@ -109,4 +128,7 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+  totalPrice,
 })(CheckoutPage)
