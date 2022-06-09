@@ -12,11 +12,17 @@ const CheckoutPage = (props) => {
       return (
         <div className="popup-back" onClick={() => setIsPopup(false)}>
           <div className="popup-container">
-            <button onClick={() => props.removeFromCart(requestedId)}>
-              <h1>Yes</h1>
+            <button
+              className="confirm-button"
+              onClick={() => props.removeFromCart(requestedId)}
+            >
+              <h2>Yes</h2>
             </button>
-            <button onClick={() => setIsPopup(false)}>
-              <h1>No</h1>
+            <button
+              className="confirm-button"
+              onClick={() => setIsPopup(false)}
+            >
+              <h2>No</h2>
             </button>
           </div>
         </div>

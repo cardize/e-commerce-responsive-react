@@ -2,7 +2,7 @@ import React from 'react'
 import './productsStyles.scss'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart } from '../../redux/actions/index'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import axios from 'axios'
 
 const Phones = (props) => {
@@ -11,6 +11,18 @@ const Phones = (props) => {
 
   const [phones, setPhones] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isAdded, setIsAdded] = useState(false)
+
+  const popupModal = useCallback(() => {
+    if (isAdded)
+      return (
+        <div>
+          <div className="popup-back">
+            <h1 onClick={() => setIsAdded(false)}>Added to cart</h1>
+          </div>
+        </div>
+      )
+  }, [isAdded])
 
   useEffect(() => {
     axios
@@ -22,6 +34,7 @@ const Phones = (props) => {
 
   return (
     <div className="productsContainer">
+      {popupModal()}
       {isLoading ? (
         <div className="loading-container">
           <div className="loading-banner">
@@ -39,7 +52,7 @@ const Phones = (props) => {
             <div className="addToCartButtonContainer">
               <button
                 className="addToCartButton"
-                onClick={() => props.addToCart(item)}
+                onClick={() => (props.addToCart(item), setIsAdded(true))}
               >
                 Add to Cart
               </button>
