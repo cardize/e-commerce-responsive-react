@@ -1,5 +1,5 @@
 import React from 'react'
-import './products.scss'
+import './styles.scss'
 import { connect } from 'react-redux'
 import { addToCart, removeFromCart } from '../../redux/actions/index'
 import { useState, useEffect, useCallback } from 'react'

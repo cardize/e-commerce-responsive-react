@@ -17,7 +17,7 @@ import Phones from './pages/products/Phones'
 import Laptops from './pages/products/Laptops'
 import Tablets from './pages/products/Tablets'
 import Login from './pages/login/Login'
-import Register from './pages/register/Register'
+import Register from './pages/register/index'
 import User from './pages/user/User'
 
 const App = () => {
