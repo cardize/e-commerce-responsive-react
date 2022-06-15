@@ -120,11 +120,13 @@ const CheckoutPage = (props) => {
         <div className="payment-container">
           <div className="payment-inputs">
             <input className="credit-number" placeholder="Card Number"></input>
-            <input className="month" placeholder="Expire Month"></input>
-            <input className="year" placeholder="Expire Year"></input>
-            <input className="cvv" placeholder="CVV"></input>
-            <button onClick={() => refreshPage()}>Complete Payment</button>
+            <input className="expiry" placeholder="M"></input>
+            <input className="expiry" placeholder="Y"></input>
+            <input className="expiry" placeholder="CVV"></input>
           </div>
+          <button className="confirm-button" onClick={() => refreshPage()}>
+            Complete Payment
+          </button>
         </div>
       ) : null}
     </div>
