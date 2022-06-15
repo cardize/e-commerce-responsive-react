@@ -1,5 +1,5 @@
 import React from 'react'
-import Categories from '../../components/categories/Categories'
+import Categories from '../../components/Categories'
 
 const Home = () => {
   return <Categories />

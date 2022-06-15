@@ -1,22 +1,22 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { ReactComponent as Logo } from '../../assets/logo.svg'
-import './headerStyles.scss'
-import checkOutLogo from '../../assets/logo.svg'
+import { ReactComponent as Logo } from '../assets/logo.svg'
+import './styles.scss'
+import checkOutLogo from '../assets/logo.svg'
 
 function Header(props) {
   return (
-    <div className="headerContainer">
-      <NavLink className="logoContainer" to="/">
+    <div className="header-container">
+      <NavLink className="logo-container" to="/">
         <Logo className="logoSvg" />
       </NavLink>
-      <div className="optionsContainer">
+      <div className="options-container">
         <NavLink to={'/login'}>
-          <button className="signInButton">User</button>
+          <button className="signin-button">User</button>
         </NavLink>
         <NavLink to="/checkout">
-          <img className="checkOutLogo" src={checkOutLogo} alt="" />
+          <img className="checkout-logo" src={checkOutLogo} alt="" />
           <p className="quentity">{props.cart.length}</p>
         </NavLink>
       </div>

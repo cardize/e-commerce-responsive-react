@@ -1,13 +1,11 @@
 import React from 'react'
 
-import categories from '../../categories'
-import CategoryItem from '../categoryItem/CategoryItem'
-
-import './CategoriesStyles.scss'
+import categories from '../categories'
+import CategoryItem from './CategoryItem'
 
 const Categories = () => {
   return (
-    <div className="categoriesContainer">
+    <div className="categories-container">
       {categories.map((item) => (
         <CategoryItem key={item.id} item={item} />
       ))}
