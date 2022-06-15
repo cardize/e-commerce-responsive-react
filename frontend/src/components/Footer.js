@@ -24,12 +24,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-right">
-          <h3 className="footer-title">Contact:</h3>
-          <p className="footer-decsription">
+          <h3 className="footer-title">
             <br />
+            Contact:
+          </h3>
+          <p className="footer-decsription">
             Lorem ipsum dolor sit amet consectetur adipiscing elit
             <br />
+            <br />
             +90010101010101
+            <br />
             <br />
             limpsum@lu.com
           </p>
