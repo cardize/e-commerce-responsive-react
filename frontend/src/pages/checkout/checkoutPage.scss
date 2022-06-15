@@ -115,7 +115,7 @@ p {
     opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   user-select: none;
   touch-action: manipulation;
-  width: 70px;
+  width: auto;
   will-change: transform, opacity;
   z-index: 0;
   &:hover {
