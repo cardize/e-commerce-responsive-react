@@ -1,3 +1,5 @@
+Mobile, Tablet and Deskop friendly website.
+
 ### `cd frontend`
 
 ### `npm install`
