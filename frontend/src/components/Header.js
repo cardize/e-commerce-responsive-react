@@ -17,7 +17,7 @@ function Header(props) {
         </NavLink>
         <NavLink to="/checkout">
           <img className="checkout-logo" src={checkOutLogo} alt="" />
-          <p className="quentity">{props.cart.length}</p>
+          <p className="quantity">{props.cart.length}</p>
         </NavLink>
       </div>
     </div>

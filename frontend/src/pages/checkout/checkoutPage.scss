@@ -1,57 +1,57 @@
+p {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
 .checkout-page {
-  width: 55%;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 100%;
+  justify-items: center;
   align-items: center;
-  margin: 50px auto 0;
-
   .checkout-header {
-    width: 500px;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    text-indent: 1rem;
     border-bottom: #fd5800 solid 1px;
-
-    .header-block {
-      text-transform: capitalize;
-      &:last-child {
-        width: 8%;
-      }
-    }
+    height: 50px;
+    align-items: center;
   }
 
   .cart-items {
+    width: 100%;
+    max-width: 500px;
     display: grid;
     justify-items: center;
     border-bottom: #fd5800 solid 1px;
-    .cart-items {
-      display: flex;
-      align-items: center;
-    }
-    .item-details {
+    .cart-item {
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 500px;
-      justify-content: space-between;
+      width: 100%;
     }
-    .item-texts {
-      width: 80px;
+    .quantity-container {
+      display: flex;
+      align-items: center;
     }
   }
 
   .total {
+    width: 100%;
+    margin-right: 3rem;
     display: flex;
-    width: 500px;
-    height: 50px;
-    justify-content: flex-end;
     align-items: center;
     font-size: 36px;
+    justify-content: flex-end;
   }
   .test-warning {
     margin-top: 20px;
     margin-bottom: 2rem;
+    padding: 1rem;
     color: red;
   }
 }
@@ -80,6 +80,7 @@
   user-select: none;
   touch-action: manipulation;
   width: 25px;
+  height: 25px;
   will-change: transform, opacity;
   z-index: 0;
   &:hover {
@@ -114,7 +115,7 @@
     opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
   user-select: none;
   touch-action: manipulation;
-  width: auto;
+  width: 70px;
   will-change: transform, opacity;
   z-index: 0;
   &:hover {
@@ -135,8 +136,10 @@
   justify-content: center;
   align-items: center;
   .popup-container {
-    width: 500px;
-    height: 200px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
     background-color: #fff;
     border-radius: 10px;
     display: flex;
@@ -144,9 +147,12 @@
     justify-content: center;
     align-items: center;
     .popup-text {
-      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      font-size: auto;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
     .popup-button-container {
       display: flex;

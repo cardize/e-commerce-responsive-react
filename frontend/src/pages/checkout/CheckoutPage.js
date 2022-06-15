@@ -17,7 +17,9 @@ const CheckoutPage = (props) => {
       return (
         <div className="popup-back" onClick={() => setIsPopup(false)}>
           <div className="popup-container">
-            <h3>Are you sure you want to remove this item?</h3>
+            <h3 className="popup-text">
+              Are you sure you want to remove this item?
+            </h3>
             <div className="popup-button-container">
               <button
                 className="confirm-button"
@@ -58,6 +60,9 @@ const CheckoutPage = (props) => {
           <span>Price</span>
         </div>
         <div className="header-block">
+          <span>Remove</span>
+        </div>
+        <div className="header-block">
           <span></span>
         </div>
       </div>
@@ -68,37 +73,34 @@ const CheckoutPage = (props) => {
         {props.cart.map((item) => {
           return (
             <div className="cart-item" key={item.id}>
-              <div className="item-details">
-                <p className="item-texts">{item.name}</p>
-                <p className="item-texts">{item.capacity}GB</p>
-                <div className="buttons">
-                  <button
-                    className="quantity-button"
-                    onClick={() =>
-                      item.quantity >= 2 ? props.decreaseQuantity(item) : null
-                    }
-                  >
-                    -
-                  </button>
-                </div>
-                <p>{item.quantity}</p>
-                <div className="buttons">
-                  <button
-                    className="quantity-button"
-                    onClick={() => props.increaseQuantity(item)}
-                  >
-                    +
-                  </button>
-                </div>
-                <p>${item.price}</p>
-
+              <p className="item-texts">{item.name}</p>
+              <p className="item-texts">{item.capacity}GB</p>
+              <div className="quantity-container">
                 <button
-                  className="confirm-button"
-                  onClick={() => (setIsPopup(true), setRequestedId(item))}
+                  className="quantity-button"
+                  onClick={() =>
+                    item.quantity >= 2 ? props.decreaseQuantity(item) : null
+                  }
                 >
-                  Remove
+                  -
+                </button>
+                <p>{item.quantity}</p>
+                <button
+                  className="quantity-button"
+                  onClick={() => props.increaseQuantity(item)}
+                >
+                  +
                 </button>
               </div>
+
+              <p>${item.price}</p>
+
+              <button
+                className="confirm-button"
+                onClick={() => (setIsPopup(true), setRequestedId(item))}
+              >
+                Remove
+              </button>
             </div>
           )
         })}
