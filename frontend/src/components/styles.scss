@@ -114,13 +114,15 @@ body {
     }
 
     .category-image {
-      margin: 20px;
+      display: inline-block;
+      align-items: center;
+      padding: 1rem;
+      margin: 2rem;
       width: 200px;
       height: 325px;
-      object-fit: scale-down;
+      border: #fd5800 solid 1px;
       border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
-        rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+      object-fit: scale-down;
       &:hover {
         transform: scale(1.05);
         transition: transform 200ms;

@@ -1,4 +1,4 @@
-import './CheckOutPageStyles.scss'
+import './checkoutPage.scss'
 import { connect } from 'react-redux'
 import {
   removeFromCart,

@@ -1,12 +1,15 @@
 .productsContainer {
-  margin: 20px;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .productContainer {
-  margin-bottom: 1rem;
+  padding: 1rem;
+  margin: 1rem;
   display: inline-block;
   align-items: center;
+  border: #fd5800 solid 1px;
+  border-radius: 20px;
   .productImage {
     display: block;
     height: 90%;
@@ -80,7 +83,7 @@
   right: 0;
   padding: 1rem;
   margin-top: 7rem;
-  margin-right: 3rem;
+  margin-right: 2rem;
   background-color: #ffffff;
   border: rgba(0, 0, 0, 0.12) solid 1px;
   border-radius: 10px;
