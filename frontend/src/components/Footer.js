@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.scss'
+import './styles.scss'
 
 import { Facebook, Instagram, Twitter } from '@material-ui/icons'
 import footerLogo from '../assets/logo.svg'
