@@ -60,7 +60,7 @@ const CheckoutPage = (props) => {
           <span>Price</span>
         </div>
         <div className="header-block">
-          <span>Remove</span>
+          <span></span>
         </div>
         <div className="header-block">
           <span></span>

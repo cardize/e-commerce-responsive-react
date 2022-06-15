@@ -12,11 +12,11 @@ p {
   justify-items: center;
   align-items: center;
   .checkout-header {
+    margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     max-width: 600px;
-    text-indent: 1rem;
     border-bottom: #fd5800 solid 1px;
     height: 50px;
     align-items: center;
