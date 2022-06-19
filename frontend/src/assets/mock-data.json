@@ -8,7 +8,7 @@
     "brand": "Apl",
     "capacity": 64,
     "price": 100,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 90
   },
   {
@@ -20,7 +20,7 @@
     "brand": "Apl",
     "capacity": 64,
     "price": 120,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 90
   },
   {
@@ -32,7 +32,7 @@
     "brand": "Apl",
     "capacity": 128,
     "price": 150,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 100
   },
   {
@@ -44,7 +44,7 @@
     "brand": "Apl",
     "capacity": 128,
     "price": 170,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 90
   },
   {
@@ -56,7 +56,7 @@
     "brand": "Apl",
     "capacity": 128,
     "price": 120,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 20
   },
   {
@@ -68,7 +68,7 @@
     "brand": "Apl",
     "capacity": 256,
     "price": 140,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 20
   },
   {
@@ -80,7 +80,7 @@
     "brand": "Apl",
     "capacity": 256,
     "price": 170,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 20
   },
   {
@@ -92,7 +92,103 @@
     "brand": "Apl",
     "capacity": 128,
     "price": 220,
-    "quentity": 1,
+    "quantity": 1,
     "stock": 20
+  },
+  {
+    "id": 9,
+    "sku": "P01064",
+    "category": "laptops",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg",
+    "name": "Laptop 1",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 1000,
+    "quantity": 1,
+    "stock": 90
+  },
+  {
+    "id": 10,
+    "sku": "P02064",
+    "category": "laptops",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg",
+    "name": "Laptop 2",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 1200,
+    "quantity": 1,
+    "stock": 90
+  },
+  {
+    "id": 11,
+    "sku": "P03128",
+    "category": "laptops",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg",
+    "name": "Laptop 3",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 1500,
+    "quantity": 1,
+    "stock": 100
+  },
+  {
+    "id": 12,
+    "sku": "P04128",
+    "category": "laptops",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/laptops.jpg",
+    "name": "Laptop 4",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 1700,
+    "quantity": 1,
+    "stock": 90
+  },
+  {
+    "id": 13,
+    "sku": "P01064",
+    "category": "tablets",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/tablets.png",
+    "name": "Tablet 1",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 1000,
+    "quantity": 1,
+    "stock": 90
+  },
+  {
+    "id": 14,
+    "sku": "P02064",
+    "category": "tablets",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/tablets.png",
+    "name": "Tablet 2",
+    "brand": "Apl",
+    "capacity": 256,
+    "price": 1050,
+    "quantity": 1,
+    "stock": 90
+  },
+  {
+    "id": 15,
+    "sku": "P03128",
+    "category": "tablets",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/tablets.png",
+    "name": "Tablet 3",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 1100,
+    "quantity": 1,
+    "stock": 100
+  },
+  {
+    "id": 16,
+    "sku": "P04128",
+    "category": "tablets",
+    "Img": "https://raw.githubusercontent.com/cardize/testData/main/tablets.png",
+    "name": "Tablet 4",
+    "brand": "Apl",
+    "capacity": 128,
+    "price": 1200,
+    "quantity": 1,
+    "stock": 90
   }
 ]
