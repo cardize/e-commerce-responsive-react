@@ -66,7 +66,6 @@ const Laptops = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
-    phones: state.phones,
   }
 }
 

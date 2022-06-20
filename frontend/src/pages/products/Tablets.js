@@ -9,7 +9,7 @@ const Tablets = (props) => {
   const url =
     'https://raw.githubusercontent.com/cardize/testData/main/datadb.json'
 
-  const [phones, setPhones] = useState([])
+  const [tablets, setTablets] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [isAdded, setIsAdded] = useState(false)
 
@@ -26,7 +26,7 @@ const Tablets = (props) => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setPhones(response.data.tablets))
+      .then((response) => setTablets(response.data.tablets))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])
@@ -41,7 +41,7 @@ const Tablets = (props) => {
           </div>
         </div>
       ) : (
-        phones.map((item) => (
+        tablets.map((item) => (
           <div className="productContainer" key={item.id}>
             <img className="productImage" src={item.Img} alt="" />
             <h1 className="productName">
@@ -66,7 +66,6 @@ const Tablets = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
-    phones: state.phones,
   }
 }
 
