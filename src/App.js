@@ -6,9 +6,9 @@ import {
   Navigate,
 } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { AuthProvider } from '../src/pages/user/AuthContext'
+import { AuthProvider } from './pages/user/AuthContext'
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../src/firebase'
+import { auth } from './firebase'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Homepage from './pages/homepage/Homepage'
