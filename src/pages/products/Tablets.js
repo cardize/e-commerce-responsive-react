@@ -26,7 +26,7 @@ const Tablets = (props) => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setTablets(response.data.tablets))
+      .then((response) => setTablets((tablets) => response.data.tablets))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])

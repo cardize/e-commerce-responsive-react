@@ -26,7 +26,7 @@ const Laptops = (props) => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setLaptops(response.data.laptops))
+      .then((response) => setLaptops((laptops) => response.data.laptops))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])

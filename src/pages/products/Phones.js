@@ -26,7 +26,7 @@ const Phones = (props) => {
   useEffect(() => {
     axios
       .get(url)
-      .then((response) => setPhones(response.data.phones))
+      .then((response) => setPhones((phones) => response.data.phones))
       .catch((error) => console.log({ error }))
       .finally(() => setIsLoading(false))
   }, [])
