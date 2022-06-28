@@ -13,6 +13,14 @@ const Laptops = (props) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isAdded, setIsAdded] = useState(false)
 
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((response) => setLaptops((laptops) => response.data.laptops))
+      .catch((error) => console.log({ error }))
+      .finally(() => setIsLoading(false))
+  }, [])
+
   const popupModal = useCallback(() => {
     if (isAdded)
       return (
@@ -23,23 +31,21 @@ const Laptops = (props) => {
       )
   }, [isAdded])
 
-  useEffect(() => {
-    axios
-      .get(url)
-      .then((response) => setLaptops((laptops) => response.data.laptops))
-      .catch((error) => console.log({ error }))
-      .finally(() => setIsLoading(false))
-  }, [])
+  const Loading = useCallback(() => {
+    return (
+      <div className="loading-container">
+        <div className="loading-banner">
+          <h1>LOADING...</h1>
+        </div>
+      </div>
+    )
+  }, [isAdded])
 
   return (
     <div className="productsContainer">
       {popupModal()}
       {isLoading ? (
-        <div className="loading-container">
-          <div className="loading-banner">
-            <h1>LOADING...</h1>
-          </div>
-        </div>
+        <Loading />
       ) : (
         laptops.map((item) => (
           <div className="productContainer" key={item.id}>
